@@ -8,21 +8,21 @@ class MemoDetailScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <View styles={styles.memoHeader}>
+          <View style={styles.memoHeader}>
             <View>
-              <Text styles={styles.memoHeaderTitle}>講座のアイデア</Text>
-              <Text styles={styles.memoHeaderDate}>2017/12/12</Text>
+              <Text style={styles.memoHeaderTitle}>講座のアイデア</Text>
+              <Text style={styles.memoHeaderDate}>2017/12/12</Text>
             </View>
           </View>
         </View>
 
-        <View styles={styles.memoContent}>
+        <View style={styles.memoContent}>
           <Text>
             講座のアイデアです。
           </Text>
         </View>
 
-        <CircleButton>+</CircleButton>
+        <CircleButton style={styles.editButton}>+</CircleButton>
       </View>
     );
   }
@@ -49,8 +49,16 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   memoContent: {
+    paddingTop: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
     fontSize: 12,
     color: '#fff',
+    flex: 1,
+  },
+  editButton: {
+    top: 120,
   },
 });
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class CircleButton extends React.Component {
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
     return (
       <View style={styles.circleButton}>
         <Text style={styles.circleButtonTitle}>
