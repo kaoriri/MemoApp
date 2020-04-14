@@ -1,18 +1,23 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 class CircleButton extends React.Component {
   render() {
+    const {children} = this.props;
     return (
       <View style={styles.circleButton}>
         <Text style={styles.circleButtonTitle}>
-          {this.props.children}
+          {children}
         </Text>
       </View>
     );
   }
 }
 
+CircleButton.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 const styles = StyleSheet.create({
   circleButton: {
